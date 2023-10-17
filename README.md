@@ -8,3 +8,17 @@ I reviewed the migration guide https://rollupjs.org/migration/ but nothing is me
 >The browser build now relies on a WASM artifact that needs to be provided as well (#5073)
 
 I'm currently trying to decipher https://github.com/rollup/rollup/pull/5073 to find out how to use this WASM artifact. Any guidance would be greatly appreciated. Thanks!
+
+Update 10/17/23
+
+Many thanks to @sadn1ck who was able to resolve the issue! The fix was to include the following configuration:
+
+```
+export default defineConfig({
+  optimizeDeps: {
+    exclude: ["@rollup/browser"],
+  },
+});
+```
+
+See also https://github.com/vitejs/vite/issues/14609
