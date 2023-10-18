@@ -21,4 +21,7 @@ export default defineConfig({
 });
 ```
 
-See also https://github.com/vitejs/vite/issues/14609
+See also
+
+ * https://github.com/vitejs/vite/issues/14609
+ * https://github.com/rollup/rollup/pull/5209
